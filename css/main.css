@@ -513,6 +513,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 8rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -579,6 +583,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -634,6 +644,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -659,12 +679,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .md\:block {
     display: block;
   }
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:w-1\/2 {
